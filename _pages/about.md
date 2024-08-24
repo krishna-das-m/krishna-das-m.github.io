@@ -17,8 +17,6 @@ selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
 ---
 
-## Self Introduction for Krishnadas Mohandas
-
 Hello! I am Krishnadas Mohandas, a dedicated researcher and academic with a passion for advancing our understanding of complex networks and its applications. Currently, I am affiliated with the Group of Physics in Economics and Social Science (FENS), where I contribute to innovative research aimed at unraveling the complexities of the social system.
 
 I hold a strong academic background, with a focus on [specific areas of expertise, e.g., social networks, agent based modeling, etc.], which has shaped my research interests and methodologies. My work primarily involves [briefly describe research focus, e.g., structural balance, signed networks, etc.], and I am committed to translating scientific findings into practical solutions that can benefit society.
