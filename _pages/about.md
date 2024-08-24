@@ -21,7 +21,7 @@ Hello! I am Krishnadas Mohandas, a dedicated researcher and academic with a pass
 
 I hold a strong academic background, with a focus on [specific areas of expertise, e.g., social networks, agent based modeling, etc.], which has shaped my research interests and methodologies. My work primarily involves [briefly describe research focus, e.g., structural balance, signed networks, etc.], and I am committed to translating scientific findings into practical solutions that can benefit society.
 
-Throughout my career, I have published numerous articles in peer-reviewed journals and have actively participated in various conferences, sharing insights and collaborating with fellow researchers. I am particularly interested in fostering interdisciplinary approaches to tackle the challenges in neuroscience.
+Throughout my career, I have published numerous articles in peer-reviewed journals and have actively participated in various conferences, sharing insights and collaborating with fellow researchers. I am particularly interested in fostering interdisciplinary approaches to tackle the challenges in complex systems.
 
 In addition to my research, I am passionate about mentoring the next generation of scientists and promoting science education. I believe that effective communication of scientific knowledge is crucial for public understanding and engagement.
 Edit `_bibliography/papers.bib` and Jekyll will render your [publications page](/al-folio/publications/) automatically.
