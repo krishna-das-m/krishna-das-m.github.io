@@ -5,7 +5,7 @@
     "image": "",
     "email": "krishnadas.mohandas.dokt@pw.edu.pl",
     "url": "https://krishna-das-m@github.io",
-    "summary": "A German-born theoretical physicist, widely ranked among the greatest and most influential scientists of all time",
+    "summary": "A young physicist",
     "location": {
       "address": "Faculty of Physics, Warsaw University of Technology",
       "postalCode": " 00-662",
@@ -22,25 +22,24 @@
   },
   "work": [
     {
-      "name": "Institute for Advanced Study, Princeton University",
-      "position": "Professor of Theoretical Physics",
-      "url": "https://example.com",
-      "startDate": "1933-01-01",
-      "endDate": "1955-01-01",
-      "summary": "Teaching at Palmer Physical Laboratory (now 302 Frist Campus Center). While not a professor at Princeton, I associated with the physics professors and continued to give lectures on campus.",
-      "highlights": ["Relativity"]
+      "name": "Indian Institute of Science Education and Research (IISER), Tirupati",
+      "position": "Research intern",
+      "url": "https://www.iisertirupati.ac.in/",
+      "startDate": "2020-11-01",
+      "endDate": "2022-04-30",
+      "summary": ["Primary Research Field: 'Nonlinear Dynamics and Nonlinear Time Series Analysis'", "Research study :Recurrence Networks and Measures of financial data."],
+      "highlights": ["Recurrence plot and network"]
     }
   ],
   "volunteer": [
     {
-      "organization": "People's Climate March",
-      "location": "Zurich, Switzerland",
-      "position": "Lead Organizer",
-      "url": "https://example.com",
+      "organization": "National Cader Corp (NCC)",
+      "location": "Kochi, India",
+      "position": "Lance Corporal",
+      "url": "https://indiancc.mygov.in/",
       "startDate": "2014-04-01",
       "endDate": "2015-07-01",
-      "summary": "Lead organizer for the New York City branch of the People's Climate March, the largest climate march in history.",
-      "highlights": ["Awarded 'Climate Hero' award by Greenpeace for my efforts organizing the march.", "Men of the year 2014 by Time magazine"]
+      "summary": "Active participation in social awareness initiatives, environmental issues"
     }
   ],
   "education": [
@@ -50,62 +49,40 @@
       "url": "https://www.pw.edu.pl/",
       "area": "Complex networks",
       "studyType": "PhD",
-      "startDate": "01.03.2022",
-      "endDate": "28.02.2026",
+      "startDate": "2022-03-01",
+      "endDate": "2026-02-28",
       "Research": ["Structural balance in signed networks"]
     }
   ],
-  "awards": [
-    {
-      "title": "Nobel Prize in Physics",
-      "date": "1921-11-01",
-      "awarder": "Royal Swedish Academy of Sciences",
-      "url": "https://www.nobelprize.org/prizes/physics/1921/einstein/biographical/",
-      "summary": "The Nobel Prizes are five separate prizes that, according to Alfred Nobel's will of 1895, are awarded to 'those who, during the preceding year, have conferred the greatest benefit to humankind.'"
-    }
-  ],
+
   "certificates": [
     {
-      "name": "Machine Learning",
-      "date": "2018-01-01",
-      "issuer": "Stanford University",
-      "url": "https://example.com",
+      "name": "Introduction to Data Science in Python",
+      "date": "2023-08-02",
+      "issuer": "University of Michigan | Coursera",
+      "url": "https://coursera.org/share/ef18235b6310de4bce214052db7caa2c",
       "icon": "fa-solid fa-location-dot"
     },
     {
-      "name": "Quantum Computing",
-      "date": "2018-01-01",
-      "issuer": "Stanford University",
+      "name": "Matlab programming for numerical computation",
+      "date": "2019-04-01",
+      "issuer": "IIT Madras | NPTEL",
       "url": "https://example.com",
       "icon": "fa-solid fa-tag"
     },
     {
-      "name": "Quantum Information",
-      "date": "2018-01-01",
-      "issuer": "Stanford University",
+      "name": "Machine Learning Specialization",
+      "date": "2024-08-31",
+      "issuer": "Stanford University | Coursera",
       "url": "https://example.com",
       "icon": "fa-solid fa-envelope"
     },
     {
-      "name": "Quantum Cryptography",
-      "date": "2018-01-01",
-      "issuer": "Stanford University",
+      "name": "Databases and SQL for Data Science with Python",
+      "date": "2024-09-30",
+      "issuer": "IBM | Coursera",
       "url": "https://example.com",
       "icon": "fa-solid fa-hashtag"
-    },
-    {
-      "name": "Quantum Communication",
-      "date": "2018-01-01",
-      "issuer": "Stanford University",
-      "url": "https://example.com",
-      "icon": "fa-solid fa-calendar"
-    },
-    {
-      "name": "Quantum Teleportation",
-      "date": "2018-01-01",
-      "issuer": "Stanford University",
-      "url": "https://example.com",
-      "icon": "fa-solid fa-clipboard-check"
     }
   ],
   "publications": [
@@ -134,24 +111,21 @@
       "level": "Master",
       "icon": "fa-solid fa-hashtag",
       "keywords": [
-        "Quantum Mechanics",
-        "Quantum Computing",
-        "Quantum Information",
-        "Quantum Cryptography",
-        "Quantum Communication",
-        "Quantum Teleportation"
+        "Complex networks",
+        "Agent based modeling",
+        "Data visualization"
       ]
     }
   ],
   "languages": [
     {
-      "language": "German",
-      "fluency": "Native speaker",
+      "language": "English",
+      "fluency": "Professional",
       "icon": ""
     },
     {
-      "language": "English",
-      "fluency": "Fluent",
+      "language": "Malayalam",
+      "fluency": "Native Speaker",
       "icon": ""
     }
   ],
@@ -160,35 +134,32 @@
       "name": "Physics",
       "icon": "fa-solid fa-tag",
       "keywords": [
-        "Quantum Mechanics",
-        "Quantum Computing",
-        "Quantum Information",
-        "Quantum Cryptography",
-        "Quantum Communication",
-        "Quantum Teleportation"
+        "Complex networks",
+        "Statistical modeling",
+        "Data driven modeling"
       ]
     }
   ],
   "references": [
     {
-      "name": "Professor John Doe",
+      "name": "Professor Janusz Holyst",
       "icon": "fa-solid fa-laptop",
       "reference": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam condimentum, diam quis convallis euismod, arcu mi ullamcorper lorem, a vestibulum nunc magna at sem. Sed in risus ac felis varius blandit. D"
     },
     {
-      "name": "Professor John Doe",
+      "name": "Professor Piotr Gorski",
       "icon": "fa-solid fa-thumbtack",
       "reference": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam condimentum, diam quis convallis euismod, arcu mi ullamcorper lorem, a vestibulum nunc magna at sem. Sed in risus ac felis varius blandit. D"
     }
   ],
   "projects": [
     {
-      "name": "Quantum Computing",
-      "summary": "Quantum computing is the use of quantum-mechanical phenomena such as superposition and entanglement to perform computation. Computers that perform quantum computations are known as quantum computers.",
-      "highlights": ["Quantum Teleportation", "Quantum Cryptography"],
-      "startDate": "2018-01-01",
-      "endDate": "2018-01-01",
-      "url": "https://example.com"
+      "name": "ALPHORN",
+      "summary": "Polarized relations and structural equilibrium in complex systems: from data to model",
+      "highlights": ["Structural balance", "Signed networks"],
+      "startDate": "2022-08-01",
+      "endDate": "2024-05-31",
+      "url": "https://fens.org.pl/en/alphorn/"
     }
   ]
 }
