@@ -17,13 +17,14 @@ selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
 ---
 
-Hello! I am Krishnadas Mohandas, a dedicated researcher and academic with a passion for advancing our understanding of complex networks and its applications. Currently, I am affiliated with the Group of Physics in Economics and Social Science (FENS), where I contribute to innovative research aimed at unraveling the complexities of the social system.
+Certainly! Here's a revised version of your "About Me" paragraph for your website:
 
-I hold a strong academic background, with a focus on [specific areas of expertise, e.g., social networks, agent based modeling, etc.], which has shaped my research interests and methodologies. My work primarily involves [briefly describe research focus, e.g., structural balance, signed networks, etc.], and I am committed to translating scientific findings into practical solutions that can benefit society.
+---
 
-Throughout my career, I have published numerous articles in peer-reviewed journals and have actively participated in various conferences, sharing insights and collaborating with fellow researchers. I am particularly interested in fostering interdisciplinary approaches to tackle the challenges in complex systems.
+I am Krishnadas Mohandas, a dedicated researcher and academic with a deep passion for exploring the intricacies of complex networks and their wide-ranging applications. As a member of the Group of Physics in Economics and Social Science (FENS), my work is focused on advancing innovative research that seeks to decode the complexities of social systems.
 
-In addition to my research, I am passionate about mentoring the next generation of scientists and promoting science education. I believe that effective communication of scientific knowledge is crucial for public understanding and engagement.
-Edit `_bibliography/papers.bib` and Jekyll will render your [publications page](/al-folio/publications/) automatically.
+With a strong academic foundation in areas such as [specific areas of expertise, e.g., social networks, agent-based modeling, etc.], my research is centered on [briefly describe research focus, e.g., structural balance, signed networks, etc.]. I am driven by a commitment to bridge the gap between theoretical research and practical solutions that can positively impact society.
 
-Link to your social media connections, too. This theme is set up to use [Font Awesome icons](https://fontawesome.com/) and [Academicons](https://jpswalsh.github.io/academicons/), like the ones below. Add your Facebook, Twitter, LinkedIn, Google Scholar, or just disable all of them.
+Over the course of my career, I have published numerous articles in leading peer-reviewed journals and actively engaged in various conferences to share my insights and collaborate with fellow researchers. My work is strongly interdisciplinary, and I am particularly interested in fostering collaborative approaches to address the complex challenges posed by modern systems.
+
+---
