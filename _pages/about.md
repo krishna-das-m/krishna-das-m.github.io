@@ -9,7 +9,7 @@ profile:
   image: krishnadas_prof_pic_color.png
   image_circular: false # crops the image to make it circular
   more_info: >
-    <p>555 Warsaw University of Technology</p>
+    <p>Warsaw University of Technology</p>
     <p>Warsaw, Poland</p>
 
 news: true # includes a list of news items
@@ -17,9 +17,6 @@ selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
 ---
 
-Certainly! Here's a revised version of your "About Me" paragraph for your website:
-
----
 
 I am Krishnadas Mohandas, a dedicated researcher and academic with a deep passion for exploring the intricacies of complex networks and their wide-ranging applications. As a member of the Group of Physics in Economics and Social Science (FENS), my work is focused on advancing innovative research that seeks to decode the complexities of social systems.
 
