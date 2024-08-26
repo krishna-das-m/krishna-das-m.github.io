@@ -23,5 +23,3 @@ I am Krishnadas Mohandas, a dedicated researcher and academic with a deep passio
 With a strong academic foundation in areas such as [specific areas of expertise, e.g., social networks, agent-based modeling, etc.], my research is centered on [briefly describe research focus, e.g., structural balance, signed networks, etc.]. I am driven by a commitment to bridge the gap between theoretical research and practical solutions that can positively impact society.
 
 Over the course of my career, I have published numerous articles in leading peer-reviewed journals and actively engaged in various conferences to share my insights and collaborate with fellow researchers. My work is strongly interdisciplinary, and I am particularly interested in fostering collaborative approaches to address the complex challenges posed by modern systems.
-
----
