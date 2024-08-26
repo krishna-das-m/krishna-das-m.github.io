@@ -92,19 +92,19 @@
     {
       "name": "Critical properties of Heider balance on multiplex networks",
       "publisher": "Physical Review E",
-      "releaseDate": "09.04.2024",
+      "releaseDate": "2024-04-09",
       "url": "https://doi.org/10.1103/PhysRevE.109.044306"
     },
     {
       "name": "Recurrence measures and transitions in stock market dynamics",
-      "publisher": "Physica a",
-      "releaseDate": "15.12.2022",
+      "publisher": "Physica A",
+      "releaseDate": "2022-12-15",
       "url": "https://doi.org/10.1016/j.physa.2022.128240"
     },
     {
       "name": "Chaos in a cyclic three-species predator–prey system with a partial consumption of superpredator",
       "publisher": "Pramana",
-      "releaseDate": "14.05.2020",
+      "releaseDate": "2020-14-05",
       "url": "https://doi.org/10.1007/s12043-020-1942-9"
     }
   ],
@@ -114,6 +114,12 @@
       "level": "Master",
       "icon": "fa-solid fa-hashtag",
       "keywords": ["Complex networks", "Agent based modeling", "Data visualization"]
+    },
+    {
+      "name": "Prgramming",
+      "level": "Master",
+      "icon": "fa-solid fa-hashtag",
+      "keywords": ["Python", "Matlab", "R"]
     }
   ],
   "languages": [
@@ -139,12 +145,12 @@
     {
       "name": "Professor Janusz Holyst",
       "icon": "fa-solid fa-laptop",
-      "reference": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam condimentum, diam quis convallis euismod, arcu mi ullamcorper lorem, a vestibulum nunc magna at sem. Sed in risus ac felis varius blandit. D"
+      "reference": ""
     },
     {
       "name": "Professor Piotr Gorski",
       "icon": "fa-solid fa-thumbtack",
-      "reference": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam condimentum, diam quis convallis euismod, arcu mi ullamcorper lorem, a vestibulum nunc magna at sem. Sed in risus ac felis varius blandit. D"
+      "reference": ""
     }
   ],
   "projects": [
