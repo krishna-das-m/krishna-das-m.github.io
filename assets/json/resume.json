@@ -27,11 +27,8 @@
       "url": "https://www.iisertirupati.ac.in/",
       "startDate": "2020-11-01",
       "endDate": "2022-04-30",
-      "summary": [
-        "Primary Research Field: 'Nonlinear Dynamics and Nonlinear Time Series Analysis'",
-        "Research study :Recurrence Networks and Measures of financial data."
-      ],
-      "highlights": ["Recurrence plot and network"]
+      "summary": ["Research Field: Nonlinear Dynamics and Nonlinear Time Series Analysis"],
+      "highlights": ["Recurrence Plots and Networks Measures of financial data"]
     }
   ],
   "volunteer": [
@@ -55,6 +52,26 @@
       "startDate": "2022-03-01",
       "endDate": "2026-02-28",
       "Research": ["Structural balance in signed networks"]
+    },
+    {
+      "institution": "Mahatma Gandhi University",
+      "location": "Kerala, India",
+      "url": "https://www.mgu.ac.in/",
+      "area": "Electronics, Statistical Physics, Nonlinear Dynamics",
+      "studyType": "M.Sc.",
+      "startDate": "2016-07-01",
+      "endDate": "2018-05-28",
+      "Research": ["Analysis of discrete time food chain model"]
+    },
+    {
+      "institution": "Mahatma Gandhi University",
+      "location": "Kerala, India",
+      "url": "https://www.mgu.ac.in/",
+      "area": "Physics",
+      "studyType": "B.Sc.",
+      "startDate": "2013-07-01",
+      "endDate": "2016-05-28",
+      "Research": ["Analysis of discrete time food chain model"]
     }
   ],
 
@@ -74,9 +91,9 @@
       "icon": "fa-solid fa-tag"
     },
     {
-      "name": "Machine Learning Specialization",
+      "name": "Machine Learning",
       "date": "2024-08-31",
-      "issuer": "Stanford University | Coursera",
+      "issuer": "Stanford University & DeepLearning.AI",
       "url": "https://example.com",
       "icon": "fa-solid fa-envelope"
     },
@@ -145,12 +162,12 @@
     {
       "name": "Professor Janusz Holyst",
       "icon": "fa-solid fa-laptop",
-      "reference": ""
+      "reference": "janusz.holyst@pw.edu.pl"
     },
     {
       "name": "Professor Piotr Gorski",
       "icon": "fa-solid fa-thumbtack",
-      "reference": ""
+      "reference": "piotr.gorski@pw.edu.pl"
     }
   ],
   "projects": [
