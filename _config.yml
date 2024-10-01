@@ -134,7 +134,7 @@ bing_site_verification: # out your bing-site-verification ID (Bing Webmaster)
 # -----------------------------------------------------------------------------
 
 blog_name: ByteWise # blog_name will be displayed in your blog page
-blog_description: a beginner-friendly blog that simplifies complex concepts
+blog_description: In simplifying complex concepts
 permalink: /blog/:year/:title/
 lsi: false # produce an index for related posts
 
