@@ -1,7 +1,7 @@
 ---
 layout: page
-title: project 9
-description: another project with an image 🎉
+title: Customer churning model
+description: predicting customer churn in banking using ML techniques
 img: assets/img/6.jpg
 importance: 4
 category: fun
