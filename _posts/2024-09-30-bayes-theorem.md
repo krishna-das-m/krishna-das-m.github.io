@@ -118,7 +118,7 @@ The array `Ptheta` gives us the prior probability distribution. This represents 
 
 #### **The Likelihood**
 **The likelihood function** is simply the joint probability of observing the data we have.
-For a set of test results, the likelihood function is expressed as:
+For a set of test results, the likelihood function is expressed as:\
 $$P(+|\theta)=\prod_i^N P(+_i|\theta)$$
 This is the product of the probabilities of observing each positive test result for a given $$\theta$$. Specifically, the likelihood function for this binary event (positive or negative test result) can be written using the **binomial distribution**:
 
@@ -228,7 +228,7 @@ Posterior mean after 10 update is: 0.107
 
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/distributions_prior_posterior_10.jpg" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/distributions_prior_posterior_10.jpg" class="img-fluid rounded z-depth-1" style="max-width: 50%;" %}
     </div>
 </div>
 
