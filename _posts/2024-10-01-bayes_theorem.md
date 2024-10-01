@@ -1,9 +1,9 @@
 ---
 layout: post
 title: Exploring Prior, Likelihood, and Posterior Distributions
-date: 2015-07-15 15:09:00
+date: 2024-10-01 15:09:00
 description: an example of a blog post with some code
-tags: formatting code
+tags: statistics code probability
 categories: sample-posts
 featured: true
 # pretty_table: true
@@ -179,10 +179,10 @@ Now, consider a stronger prior, $$\beta(10,10)$$, along with a larger dataset (1
 The **likelihood function** with the larger sample is also much sharper and concentrated around $$\theta = 0.2$$. This sharpness reflects the informativeness of the data: with more samples, the data has reduced uncertainty, and the peak clearly suggests that $$\theta = 0.2$$ is the most likely value.
 Finally, the **posterior distribution** in this case is sharper and more concentrated around $$\theta = 0.2$$, indicating much higher certainty about the estimate of $$\theta$$. With the larger dataset, the prior has much less influence compared to the likelihood, which dominates and drives the sharper posterior.
 
-Now, let’s consider a what happens when we use the posterior distribution from the previous step as the new prior. This updated prior now reflects a more informed belief about the unknown parameter $$\theta$$.
+Now, let’s look what happens when we use the posterior distribution from the previous step as the new prior. This updated prior now reflects a more informed belief about the unknown parameter $$\theta$$.
 Since this new prior is derived from the posterior of the previous round, it’s much more concentrated compared to the original prior we started with. We now have a much stronger belief that $$\theta$$ lies within a narrow range (around 0.15 in this case).
 The likelihood function looks almost the same as in the previous figure and still shows a peak around the same value of $$\theta$$, indicating that the observed data strongly suggests that $$\theta$$ falls within a same range.
-The updated posterior distribution is even sharper and more concentrated than before, reflecting a very strong belief about the value of $$\theta$$. Compared to the earlier posterior (based on a broader prior), this one is peaked around 0.12, showing that we now have an even greater degree of certainty about $$\theta$$.
+The updated posterior distribution is even sharper and more concentrated than before, reflecting a very strong belief about the value of $$\theta$$. Compared to the earlier posterior (based on a broader prior), this one is peaked around 0.12, showing that we now have an even greater degree of certainty about $$\theta$$.\
 The key takeaway here is that as we gather more data and update our beliefs (using Bayes' Theorem), our estimates become more precise. The prior becomes more informative, and the posterior narrows further, reflecting reduced uncertainty about the unknown parameter .
 
 <div class="row mt-3">
@@ -190,6 +190,10 @@ The key takeaway here is that as we gather more data and update our beliefs (usi
         {% include figure.liquid loading="eager" path="assets/img/distributions_prior_posterior.jpg" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
+
+Bayesian updating is a powerful method that allows us to continuously refine our estimates as new data becomes available. This process is iterative: we start with an initial belief (the **prior**), update it with evidence (the **likelihood**), and obtain a revised belief (the **posterior**). The posterior then serves as the new prior for the next round of updates. Let’s see how this works in practice by performing **Bayesian updating** in Python.
+
+Below is a Python implementation that demonstrates the sequential nature of this process over 10 updates:
 
 ```python
 # Bayesian updating
@@ -206,6 +210,8 @@ def bayesian_update(bayes_df, n):
 
 bayes_update_df = bayesian_update(bayes_df,n=10)
 ```
+
+Running the above code produces the following results, showing how the **posterior mean** changes after each update:
 
 ```python
 Posterior mean after 1 update is: 0.136
@@ -225,3 +231,5 @@ Posterior mean after 10 update is: 0.107
         {% include figure.liquid loading="eager" path="assets/img/distributions_prior_posterior_10.jpg" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
+
+This illustrates the **sequential nature of Bayesian updating**. This iterative process is fundamental to **Bayesian inference** and demonstrates how our understanding of a parameter improves with each new piece of evidence, making Bayesian methods highly suitable for dynamic, real-world problems where data comes in sequentially over time.
