@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Exploring Prior, Likelihood, and Posterior Distributions
-date: 2024-10-01 15:09:00
+date: 2024-09-30 15:09:00
 description: an example of a blog post with some code
 tags: statistics code probability
 categories: sample-posts
