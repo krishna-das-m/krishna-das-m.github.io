@@ -244,6 +244,7 @@ exclude:
   - package.json
   - package-lock.json
   - _pages/about_einstein.md
+  - _pages_unused/
   - purgecss.config.js
   - README.md
   - readme_preview/
@@ -296,6 +297,7 @@ jekyll-minifier:
 
 jekyll-archives:
   enabled: [year, tags, categories] # enables year, tag and category archives (remove if you need to disable one of them).
+  # enabled: [year, tags, categories]
   layouts:
     year: archive-year
     tag: archive-tag
@@ -305,8 +307,8 @@ jekyll-archives:
     tag: "/blog/tag/:name/"
     category: "/blog/category/:name/"
 
-display_tags: ["statistics", "code", "probability", "math", "blockquotes"] # these tags will be displayed on the front page of your blog
-display_categories: ["external-services"] # these categories will be displayed on the front page of your blog
+display_tags: ["statistics", "code", "probability", "math"] # these tags will be displayed on the front page of your blog
+display_categories: ["ML-concepts"] # these categories will be displayed on the front page of your blog
 
 # -----------------------------------------------------------------------------
 # Jekyll Scholar

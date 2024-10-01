@@ -4,7 +4,7 @@ title: Exploring Prior, Likelihood, and Posterior Distributions
 date: 2024-09-30 15:09:00
 description: an example of a blog post with some code
 tags: statistics code probability
-categories: sample-posts
+categories: ML-concepts
 featured: true
 # pretty_table: true
 ---
@@ -228,7 +228,7 @@ Posterior mean after 10 update is: 0.107
 
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/distributions_prior_posterior_10.jpg" class="img-fluid rounded z-depth-1" style="max-width: 50%;" %}
+        {% include figure.liquid loading="eager" path="assets/img/distributions_prior_posterior_10.jpg" class="img-fluid rounded z-depth-1 mx-auto d-block"  style="max-width: 300px; height: auto;" %}
     </div>
 </div>
 
