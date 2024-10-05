@@ -4,7 +4,7 @@ title: ALPHORN
 description: Polarized relations and structural equilibrium in complex systems
 img: assets/img/balance_unbalanced_list-1.png
 importance: 1
-category: work
+category: Physics
 related_publications: true
 ---
 

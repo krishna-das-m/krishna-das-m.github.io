@@ -4,7 +4,7 @@ title: Customer churning model
 description: predicting customer churn in banking using ML techniques
 img: assets/img/6.jpg
 importance: 4
-category: fun
+category: ML
 ---
 
 Every project has a beautiful feature showcase page.
