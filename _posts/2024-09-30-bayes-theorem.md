@@ -2,7 +2,7 @@
 layout: post
 title: Exploring Prior, Likelihood, and Posterior Distributions
 date: 2024-09-30 15:09:00
-description: an example of a blog post with some code
+description: Understanding the basics of Bayes' theorem
 tags: statistics code probability
 categories: ML-concepts
 featured: true
