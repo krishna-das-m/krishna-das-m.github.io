@@ -1,6 +1,6 @@
 ---
 layout: page
-title: signed_networks
+title: Signed networks
 description: Interdisciplinary research on signed networks
 img: assets/img/alicebob.png
 importance: 4
