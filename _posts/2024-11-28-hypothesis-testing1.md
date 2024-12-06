@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Hypothesis testing: Part I
-date: 2024-11-30 15:04:00
+title: Hypothesis testing- Part I
+date: 2024-10-28 15:04:00
 description: Introduction to hypothesis testing
 tags: statistics code
 categories: ML-concepts
