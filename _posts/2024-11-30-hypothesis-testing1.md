@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Hypothesis testing: Part I
-date: 2024-10-28 15:04:00
+date: 2024-11-30 15:04:00
 description: Introduction to hypothesis testing
 tags: statistics code
 categories: ML-concepts
@@ -92,7 +92,7 @@ else:
 output:
 `T-statistic: 40.020422168327485`
 `P-value: 0.0`
-`We reject the null hypothesis. There is a significant difference in average heights.``
+`We reject the null hypothesis. There is a significant difference in average heights.`
 `t-critical:1.6451077126390887`
 
 
