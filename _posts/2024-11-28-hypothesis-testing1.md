@@ -23,16 +23,10 @@ Once we define the null and alternative hypotheses, the next step is to assess t
 At the heart of this process is the concept of the **p-value** and the **significance level ($$\alpha$$)**.
 To put in a mathematical perspective, we loot at the probability of obtaining the observed data under the assumption that  the null hypothesis is true. This probability threshold commonly called as significance level $$\alpha$$, determines whether to reject the null hypothesis when the null hypothesis is true (Type I error). A common value for $$\alpha$$ is $$5\%$$. This means that there a $$5\%$$ risk of rejecting the null hypothesis. i.e. believing there is a difference in the observed evidence when there actually isn't.
 
-#### How Do We Make a Decision? test-statistic and p-Value
-
-Once the null and alternative hypotheses are defined, the next critical step in hypothesis testing is to evaluate the evidence provided by the data. This evidence helps us decide whether to reject or fail to reject the null hypothesis. But how do we quantify this evidence in a way that allows for a clear and objective decision? One way is to look at the p-value and second method is test-statistic
-
-> [! p-value]
 > The **p-value** is the probability of observing the data—or something more extreme—assuming that the null hypothesis is true.
 
 **p-value**provides a measure of how compatible the data is with the null hypothesis. A smaller p-value indicates that the observed data is less likely under the null hypothesis, providing stronger evidence against it. Now what p-values rejects the null hypothesis. For this there's a threshold that we set based on specific circumstances.
 
-> [!significance level (alpha)]
 > The **significance level ($$\alpha$$)** is a threshold we set in advance to determine whether the p-value is small enough to reject the null hypothesis. In essence, $$\alpha$$ defines the maximum probability of making a **Type I error**—rejecting the null hypothesis when it is actually true.
 
 The significance level represents our tolerance for risk in making an incorrect conclusion. A common value for $$\alpha$$ is **0.05** (or 5%), although it can vary depending on the context. For example:
