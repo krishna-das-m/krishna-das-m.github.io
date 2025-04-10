@@ -47,15 +47,15 @@ t= \frac{difference~in~sample~stat- difference~in~population~parameter}{SE}
 
 If we use $$\bar{x}$$ to denote the mean sample statistic,
 
-\begin{equation}
+$$
 t= \frac{(\bar{x}_{US} - \bar{x}_{EU}) - (\mu_{US}-\mu_{EU})}{SE(\bar{x}_{US} -\bar{x}_{EU})}
-\end{equation}
+$$
 
 The standard error is calculated as follows,
 
-\begin{equation}
+$$
 SE(\bar{x}_{US}-\bar{x}_{EU})\approx \sqrt{\frac{s^2_{US}}{n_{US}}+\frac{s^2_{EU}}{n_{EU}}}
-\end{equation}
+$$
 
 where $$s$$ is the standard deviation of the variable and $$n$$ is the sample size.
 If we assume the null hypothesis is true:
