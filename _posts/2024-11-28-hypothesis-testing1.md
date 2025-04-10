@@ -35,12 +35,20 @@ The significance level represents our tolerance for risk in making an incorrect 
 - In exploratory research, where the goal is to identify potential leads rather than make definitive claims, $$\alpha$$ might be set to 0.1.
 
 If we choose $$\alpha = 0.05$$, this means there is a **5% risk of rejecting the null hypothesis when it is actually true**. In other words, we are allowing for a 5% chance of observing results as extreme as those in the data (or more extreme) due to random sampling variability, even though the null hypothesis is correct.
-Another way to make a decision is using the test statistic. If the test-statistic is greater than the critical value then we reject the null hypothesis and vice-versa.
+Another way to make a decision is using the test statistic. A test statistic is defined as a quantity taken from a sample that is used for deciding whether to reject or accept the null hypothesis.
+The general formula for calculating a test statistic is:
+\begin{equation}
+test~statistic = \frac{Sample ~ statistic-Value ~ of ~ parameter~ according~to ~null}{Standard~error~(SE)~of~the~sample~statistic}
+\end{equation}
+
+If the test-statistic is greater than the critical value then we reject the null hypothesis and vice-versa.
+
 ##### The Role of the p-Value in Decision-Making
 
 To decide whether to reject the null hypothesis, we compare the p-value to the significance level $$\alpha$$:
 - If the **p-value ≤ $$\alpha$$**, we **reject the null hypothesis**. This indicates that the data provides sufficient evidence to conclude that the null hypothesis is unlikely to be true.
 - If the **p-value > $$\alpha$$**, we **fail to reject the null hypothesis**. This means the data does not provide strong enough evidence against the null hypothesis, so we retain it (but we do not prove it to be true).
+
 #### Balancing Significance Level and Risk
 
 Choosing the significance level is a trade-off between sensitivity and specificity. Lowering $$\alpha$$ (e.g., from 0.05 to 0.01) reduces the risk of Type I errors but increases the risk of **Type II errors** (failing to reject the null hypothesis when it is false). The choice of $$\alpha$$ depends on the context and the consequences of making incorrect decisions.
