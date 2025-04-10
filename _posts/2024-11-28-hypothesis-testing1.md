@@ -35,6 +35,7 @@ The significance level represents our tolerance for risk in making an incorrect 
 - In exploratory research, where the goal is to identify potential leads rather than make definitive claims, $$\alpha$$ might be set to 0.1.
 
 If we choose $$\alpha = 0.05$$, this means there is a **5% risk of rejecting the null hypothesis when it is actually true**. In other words, we are allowing for a 5% chance of observing results as extreme as those in the data (or more extreme) due to random sampling variability, even though the null hypothesis is correct.
+
 Another way to make a decision is using the test statistic. A test statistic is defined as a quantity taken from a sample that is used for deciding whether to reject or accept the null hypothesis.
 The general formula for calculating a test statistic is:
 

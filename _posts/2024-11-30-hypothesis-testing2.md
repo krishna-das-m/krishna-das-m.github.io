@@ -13,10 +13,12 @@ Here I would like to discuss the two-sample or independent t-test where we test 
 
 As an example discussed in the previous section, we’ll test whether the average height of males in the US is different from those in the EU using Python. So the null hypothesis is that the population mean for the people in two regions are the same, and the alternative hypothesis is that the population mean for people in US are larger than those from EU.
 Assume we have two datasets: one for the US and one for the EU.
+
 $$H_0:\mu_{US}=\mu_{EU}$$  
 $$H_A:\mu_{US}>\mu_{EU}$$  
 
 An alternate way of writing the above equation is to compare the differences in population means to zero. Zero here corresponds to our hypothesized value for the differences in means.
+
 $$H_0:\mu_{US}-\mu_{EU}=0$$  
 $$H_A:\mu_{US}-\mu_{EU}>0$$  
 
@@ -42,8 +44,9 @@ In the two sample case, the test statistic denoted as $$t$$, uses a similar equa
 t= \frac{difference~in~sample~stat- difference~in~population~parameter}{SE}
 \end{equation}
 
+If we use $$\bar{x}$$ to denote the mean sample statistic,
 \begin{equation}
-t= \frac{(\bar{x}_{US}-\bar{x}_{EU})- (\mu_{US}-\mu_{EU})}{SE(\bar{x}_{US}-\bar{x}_{EU})}
+t= \frac{(\bar{x}_{US} - \bar{x}_{EU}) - (\mu_{US}-\mu_{EU})}{SE(\bar{x}_{US} -\bar{x}_{EU})}
 \end{equation}
 
 The standard error is calculated as follows,
