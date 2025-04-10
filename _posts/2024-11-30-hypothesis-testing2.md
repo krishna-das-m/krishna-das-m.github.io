@@ -37,17 +37,20 @@ The z-scores are calculated as follows,
 \begin{equation}
 z= \frac{Sample~stat-population~parameter}{SE}
 \end{equation}
-In the two sample case, the test statistic denoted as $t$, uses a similar equation
+In the two sample case, the test statistic denoted as $$t$$, uses a similar equation
 \begin{equation}
 t= \frac{difference~in~sample~stat- difference~in~population~parameter}{SE}
 \end{equation}
+
 \begin{equation}
 t= \frac{(\bar{x}_{US}-\bar{x}_{EU})- (\mu_{US}-\mu_{EU})}{SE(\bar{x}_{US}-\bar{x}_{EU})}
 \end{equation}
+
 The standard error is calculated as follows,
 \begin{equation}
 SE(\bar{x}_{US}-\bar{x}_{EU})\approx \sqrt{\frac{s^2_{US}}{n_{US}}+\frac{s^2_{EU}}{n_{EU}}}
 \end{equation}
+
 where $$s$$ is the standard deviation of the variable and $$n$$ is the sample size.
 If we assume the null hypothesis is true:
 $$H_0:\mu_{US}-\mu_{EU}=0 \implies t=\frac{(\bar{x}_{US}-\bar{x}_{EU})}{SE(\bar{x}_{US}-\bar{x}_{EU})}$$
