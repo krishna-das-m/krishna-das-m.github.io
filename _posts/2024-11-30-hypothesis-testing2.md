@@ -35,6 +35,7 @@ eu_heights = np.random.normal(loc=174, scale=8, size=100)  # Mean=170, SD=10
 The distribution of these two height more or less looks the same, with almost the same mean. Now let's perform the t-test. For two-sample t-test we have consider the half of the p-value.
 
 #### Standardizing test-statistic
+
 The z-scores are calculated as follows,
 \begin{equation}
 z= \frac{Sample~stat-population~parameter}{SE}
@@ -45,11 +46,13 @@ t= \frac{difference~in~sample~stat- difference~in~population~parameter}{SE}
 \end{equation}
 
 If we use $$\bar{x}$$ to denote the mean sample statistic,
+
 \begin{equation}
 t= \frac{(\bar{x}_{US} - \bar{x}_{EU}) - (\mu_{US}-\mu_{EU})}{SE(\bar{x}_{US} -\bar{x}_{EU})}
 \end{equation}
 
 The standard error is calculated as follows,
+
 \begin{equation}
 SE(\bar{x}_{US}-\bar{x}_{EU})\approx \sqrt{\frac{s^2_{US}}{n_{US}}+\frac{s^2_{EU}}{n_{EU}}}
 \end{equation}
