@@ -53,6 +53,7 @@ SE(\bar{x}_{US}-\bar{x}_{EU})\approx \sqrt{\frac{s^2_{US}}{n_{US}}+\frac{s^2_{EU
 
 where $$s$$ is the standard deviation of the variable and $$n$$ is the sample size.
 If we assume the null hypothesis is true:
+
 $$H_0:\mu_{US}-\mu_{EU}=0 \implies t=\frac{(\bar{x}_{US}-\bar{x}_{EU})}{SE(\bar{x}_{US}-\bar{x}_{EU})}$$
 
 $$t=\frac{(\bar{x}_{US}-\bar{x}_{EU})}{\sqrt{\frac{s^2_{US}}{n_{US}}+\frac{s^2_{EU}}{n_{EU}}}}$$
