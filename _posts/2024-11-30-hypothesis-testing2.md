@@ -27,7 +27,7 @@ If you're testing whether a new medication works better than a placebo, or in ou
 
 Let’s set up the scenario. A company claims its protein bar weighs 20 grams. But when I randomly checked a few samples from stores in India and Poland, I noticed something odd. The bars didn’t weigh the same.
 
-So I decided to go all in: I collected 1000 protein bars from India and 1000 from Poland. Here's what I found:
+So I decided to go all in: I collected (hypothetically) 100 protein bars from India and 100 from Poland. Here's what I found:
 
 - **India**: Mean weight = 20.5g, Standard deviation = 1g
 - **Poland**: Mean weight = 19.5g, Standard deviation = 1g
@@ -60,23 +60,28 @@ Let $$\bar{x}_{ind}$$ and $$\bar{x}_{pln}$$ be the sample mean for the mass in I
 We’ll test whether the average weight of protein bar in the India is different from those in the Poland using Python. So the null hypothesis is that the population mean for the weight in two regions are the same, and the alternative hypothesis is that the population mean for mass of protein bar in India is larger than those from Poland.
 
 Assume we have two datasets: one for the India and one for the Poland.
+
 $$H_0:\mu_{ind}=\mu_{pln}$$  
 $$H_A:\mu_{ind}>\mu_{pln}$$  
 
-An alternate way of writing the above equation is to compare the differences in population means to zero. Zero here corresponds to our hypothesized value for the differences in means.  
+An alternate way of writing the above equation is to compare the differences in population means to zero. Zero here corresponds to our hypothesized value for the differences in means.
+
 $$H_0:\mu_{ind}-\mu_{pln}=0$$  
 $$H_A:\mu_{ind}-\mu_{pln}>0$$
 
 #### Standardizing test-statistic
 
 The z-scores are calculated as follows,
-\begin{equation}
+
+$$
 z= \frac{Sample~stat-population~parameter}{SE}
-\end{equation}
+$$
+
 In the two sample case, the test statistic denoted as $$t$$, uses a similar equation
-\begin{equation}
-t= \frac{difference~in~sample~stat- difference~in~population~parameter}{SE}
-\end{equation}
+
+$$
+t= \frac{\Delta ~sample~stat- \Delta ~population~parameter}{SE}
+$$
 
 If we use $$\bar{x}$$ to denote the mean sample statistic,
 
