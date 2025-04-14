@@ -47,14 +47,20 @@ protein_ind = np.random.normal(loc=20.5, scale=1, size=n_ind) # sample distribut
 protein_pln = np.random.normal(loc=19.5, scale=1, size=n_pln)
 ```
 
+Before diving into the test, it's always good practice to look at the distribution of the sample data. So, I plotted histograms of the weights from both India and Poland. The distribution of these two masses more or less looks the same—both are roughly normal with a slight shift in their average values.
+
+This observation gives us a hint: although the shapes are similar, the means are slightly different, and that’s what we’ll test statistically.
+
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-0">
         {% include figure.liquid loading="eager" path="assets/img/blog/distribution_ind_pln.png" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 
-The distribution of these two mass more or less looks the same, with slightly different mean.
-Although we don't know the population mean, we estimate it using the sample mean.
+
+## Framing the Hypothesis
+
+Now, in reality, we don’t know the **true population mean** (the actual average mass of _all_ protein bars in each country). So, we use the **sample means** as our best estimates.
 Let $$\bar{x}_{ind}$$ and $$\bar{x}_{pln}$$ be the sample mean for the mass in India and Poland respectively. The difference between these two sample means is the test statistic for the hypothesis test.
 
 We’ll test whether the average weight of protein bar in the India is different from those in the Poland using Python. So the null hypothesis is that the population mean for the weight in two regions are the same, and the alternative hypothesis is that the population mean for mass of protein bar in India is larger than those from Poland.
