@@ -83,7 +83,7 @@ When initializing weights and biases, the goal is to start with small random val
     W2 = random values of shape (1, 3)
     ```
 - **Biases (`b1`, `b2`)**: Usually initialized to **zeros**. Starting biases at zero is safe, and they’ll quickly move during training.
-### 🧠 Why Random Initialization Is Important
+### Why Random Initialization Is Important
 If all weights were initialized to the same value (like zero), all neurons in a layer would learn the same thing — this is known as the **symmetry problem**. Random initialization ensures that each neuron starts with a different perspective on the data.
 
 To recap, our network has the following parameters:
