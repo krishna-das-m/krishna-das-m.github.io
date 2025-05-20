@@ -19,6 +19,7 @@ We'll go through each steps below to successfully understand the basics of a neu
 6. Update parameters
 7. Training the model
 8. Predicting the model
+
 In this post we'll cover the first two steps-designing our neural network and it's initial state.
 
 ## Step 1: Defining the Neural Network Structure: Understanding Layers
@@ -48,6 +49,7 @@ Let's look at a sample of what this training data might include:
 | 0.3 | 0.5    | 0.7           | 0.8          | 1         |
 | 0.9 | 0.2    | 0.1           | 0.2          | 0         |
 
+
 1. **Age** (normalized between 0 and 1)
 2. **Annual Income** (normalized)
 3. **Browsing Time on Website** (in minutes, normalized)
@@ -61,15 +63,17 @@ For our customer purchase prediction model, we'll implement a straightforward 2 
 - **Input Layer**: 4 neurons (each corresponding to one input feature)
 - **Hidden Layer**: 3 neurons (fully connected to all input neurons)
 - **Output Layer**: 1 neuron (outputs a value between 0 and 1 — interpreted as purchase probability)
+
 This architecture is technically considered a two-layer network in modern deep learning terminology, as the input layer doesn't perform calculations but simply passes data forward. A schematic representation of the NN is shown below.
 
-<div class="row mt-3">
-    <div class="col-sm mt-3 mt-md-0 text-center">
+<div class="row justify-content-center">
+    <div class="col-sm-8 col-md-6 mt-4">
         {% include figure.liquid loading="eager" path="assets/img/blog/neural_network.png" class="img-fluid rounded z-depth-1" style="max-width: 300px; height: auto;" %}
     </div>
 </div>
 
 When examining training data, we denote the $$m^{th}$$ training example for the $$i^{th}$$ input feature as $$x_i^{(m)}$$.For neuron activations, we use $$a_i^{[l]}$$ to represent the output value of the $$i^{th}$$ neuron in layer $$l$$ after applying the activation function. More generally, we can represent a neuron in any adjacent preceding layer as $$a_i^{[l-1]}$$.
+
 Great! Now that we’ve defined the structure of the neural network, the next step is to **initialize the parameters** — specifically, the **weights** and **biases**. These parameters are what the network will learn during training.
 
 ## Step 2: Initializing Parameters – Weights and Biases
@@ -108,22 +112,34 @@ Similarly, the activation of neuron $$i$$ in layer $$l$$ is represented as $$a_i
     </div>
 </div>
 
-For a single neuron, say the first neuron in the first hidden layer $(i=1,l=1)$, the input to this neuron before the activation function, often denoted as $z$, is calculated as the weighted sum of the activations from the preceding layer ($a[0]$ represents the input layer activations) plus the bias term ($b_1^{[1]}$​):
+For a single neuron, say the first neuron in the first hidden layer $$(i=1,l=1)$$, the input to this neuron before the activation function, often denoted as $$z$$, is calculated as the weighted sum of the activations from the preceding layer ($$a[0]$$ represents the input layer activations) plus the bias term ($$b_1^{[1]}$$​):
+
 $$z_1^{[1]}​=w_1^{[1]T}​a^{[0]}+b_1^{[1]}$$
-This value $z_1^{[1]}​$ is then passed through the activation function, $g(z)$, to get the activation of the neuron:
+
+This value $$z_1^{[1]}​$$ is then passed through the activation function, $$g(z)$$, to get the activation of the neuron:
+
 $$a_1^{[1]}​=g(z_1^{[1]}​)$$
-More generally, for neuron $i$ in layer $l$, the calculation is:
+
+More generally, for neuron $$i$$ in layer $$l$$, the calculation is:
+
 $$z_i^{[l]}​=w_i^{[l]T}​a^{[l−1]}+b_i^{[l]}​
 $$
+
+
 $$a_i^{[l]}​=g(z_i{[l]}​)$$
+
 While understanding individual neuron calculations is important, neural networks primarily leverage linear algebra to perform these computations for an entire layer simultaneously. This is where the matrix representation becomes invaluable.
 
 We can calculate the $$Z$$ values for all neurons in layer $$l$$ using the weight matrix $$W^{[l]}$$ (where each row is a weight vector $$w_i^{[l]T}​$$, the activation matrix from the previous layer $$A^{[l−1]}$$, and the bias vector $$b^{[l]}$$:
+
 $$Z^{[l]}=W^{[l]}A^{[l−1]}+b^{[l]}$$
-Notice the difference in how the weight matrix $$W^{[l]}$$ is used here compared to the single neuron equation. In the matrix equation, $$W^{[l]}$$ is structured so that when multiplied by the activation matrix $$A^{[l−1]}$$, it simultaneously computes the weighted sum ($$w_i^{[l]T}​a^{[l−1]})$$ for _every_ neuron $$i$$ in layer $$l$$ across _all_ training examples. This single matrix multiplication efficiently performs all the necessary dot products at once!
+
+Notice the difference in how the weight matrix $$W^{[l]}$$ is used here compared to the single neuron equation. In the matrix equation, $$W^{[l]}$$ is structured so that when multiplied by the activation matrix $$A^{[l−1]}$$, it simultaneously computes the weighted sum ($$w_i^{[l]T}​a^{[l−1]})$$ for every neuron $$i$$ in layer $$l$$ across all training examples. This single matrix multiplication efficiently performs all the necessary dot products at once!
 
 Finally, applying the activation function g element-wise to the matrix $$Z^{[l]}$$ gives us the activation matrix for layer $$l$$, $$A^{[l]}$$:
+
 $$A^{[l]}=g(Z^{[l]})$$
+
 This matrix $$A^{[l]}$$ then serves as the input activation for the next layer's calculations. This matrix-based approach allows for highly parallelized and efficient computation, which is fundamental to training neural networks on large datasets.
 
 ### Understanding the Parameter Shapes
@@ -134,6 +150,8 @@ The dimensions of these matrices and vectors are crucial for ensuring the math w
 - **Hidden Layer** → **Output Layer (Layer 2):**
     - **Weights (**$$W^{[2]}$$**):** This matrix connects the 3 hidden neurons to the single output neuron. Its shape is **(1, 3)**.
     - **Bias** ($$b^{[2]}$$): There is one bias term for the single output neuron. This is represented as a vector of shape **(1, 1)** (or simply a scalar).
+
 Generally,  the weight matrix $$W^{[1]}$$ has the shape ($$n_h​^{[l]}×n_h^{[l-1]}​$$), where $$n_h^{[l]}$$ is the number of hidden units in layer $$l$$ and the bias vector $$b^{[1]}$$ has the shape ($$n_h^{[l]}​×1$$).
 The activations of a given layer will be a matrix of shape $$(n_h^{[l]}\times m)$$ where $$m$$ represents the number of observations being fed through the network.
+
 So, the next time you encounter a neural network, remember the elegant matrix operations happening under the hood. This fundamental understanding is your key to building and training more complex models!
