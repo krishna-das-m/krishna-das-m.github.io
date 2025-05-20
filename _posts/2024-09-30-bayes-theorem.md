@@ -185,8 +185,8 @@ The likelihood function looks almost the same as in the previous figure and stil
 The updated posterior distribution is even sharper and more concentrated than before, reflecting a very strong belief about the value of $$\theta$$. Compared to the earlier posterior (based on a broader prior), this one is peaked around 0.12, showing that we now have an even greater degree of certainty about $$\theta$$.\
 The key takeaway here is that as we gather more data and update our beliefs (using Bayes' Theorem), our estimates become more precise. The prior becomes more informative, and the posterior narrows further, reflecting reduced uncertainty about the unknown parameter .
 
-<div class="row mt-3">
-    <div class="col-sm mt-3 mt-md-0">
+<div class="row justify-content-center">
+    <div class="col-sm-8 col-md-6 mt-4">
         {% include figure.liquid loading="eager" path="assets/img/distributions_prior_posterior.jpg" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
