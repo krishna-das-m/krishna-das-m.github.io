@@ -50,6 +50,7 @@ Let's look at a sample of what this training data might include:
 | 0.9 | 0.2    | 0.1           | 0.2          | 0         |
 
 
+
 1. **Age** (normalized between 0 and 1)
 2. **Annual Income** (normalized)
 3. **Browsing Time on Website** (in minutes, normalized)
@@ -106,7 +107,7 @@ To make the connections clearer, we've color-coded the weights, biases, and the 
 To clarify the upcoming calculations, let's refine our notation For a given layer $$l$$, the weights connecting to neuron $$i$$ are represented as a vector $$w_i^{[l]}$$​. The subscript $$i$$ indicates the neuron receiving the weights, and the superscript $$l$$ indicates the layer. This is shown in the figure below.
 Similarly, the activation of neuron $$i$$ in layer $$l$$ is represented as $$a_i^{[l]}$$. For example, $$a_1^{[1]}$$​ represents the activation of the first neuron in the first hidden layer.
 
-<<div class="row justify-content-center">
+<div class="row justify-content-center">
     <div class="col-sm-8 col-md-6 mt-4">
         {% include figure.liquid loading="eager" path="assets/img/blog/weight_matrix.png" class="img-fluid rounded z-depth-1" %}
     </div>
