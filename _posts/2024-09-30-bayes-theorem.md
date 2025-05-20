@@ -226,8 +226,8 @@ Posterior mean after 9 update is: 0.108
 Posterior mean after 10 update is: 0.107
 ```
 
-<div class="row mt-3">
-    <div class="col-sm mt-3 mt-md-0">
+<div class="row justify-content-center">
+    <div class="col-sm-8 col-md-6 mt-4">
         {% include figure.liquid loading="eager" path="assets/img/distributions_prior_posterior_10.jpg" class="img-fluid rounded z-depth-1 mx-auto d-block"  style="max-width: 300px; height: auto;" %}
     </div>
 </div>

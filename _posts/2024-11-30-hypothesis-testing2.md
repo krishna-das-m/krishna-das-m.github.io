@@ -51,8 +51,8 @@ Before diving into the test, it's always good practice to look at the distributi
 
 This observation gives us a hint: although the shapes are similar, the means are slightly different, and that’s what we’ll test statistically.
 
-<div class="row mt-3">
-    <div class="col-sm mt-3 mt-md-0">
+<div class="row justify-content-center">
+    <div class="col-sm-8 col-md-6 mt-4">
         {% include figure.liquid loading="eager" path="assets/img/blog/distribution_ind_pln.png" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
@@ -184,8 +184,8 @@ plt.title('t-distribution')
 plt.legend(loc='best')
 plt.text(2,0.13, r'p-value$=P(t>|t_0|)$')
 ```
-<div class="row mt-3">
-    <div class="col-sm mt-3 mt-md-0">
+<div class="row justify-content-center">
+    <div class="col-sm-8 col-md-6 mt-4">
         {% include figure.liquid loading="eager" path="assets/img/blog/t-distribution_ind_pln.png" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>

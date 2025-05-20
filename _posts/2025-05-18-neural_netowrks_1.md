@@ -50,7 +50,7 @@ Let's look at a sample of what this training data might include:
 | 0.9 | 0.2    | 0.1           | 0.2          | 0         |
 
 
-
+Let's look at each of the input features:
 1. **Age** (normalized between 0 and 1)
 2. **Annual Income** (normalized)
 3. **Browsing Time on Website** (in minutes, normalized)
