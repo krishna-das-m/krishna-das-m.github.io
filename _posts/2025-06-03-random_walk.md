@@ -2,9 +2,9 @@
 layout: post
 title: Random Walks
 date: 2025-05-18 15:04:00
-description: Defining the network architecture and intializing the NN parameters
-tags: ML
-categories: ML-concepts
+description: Implementing biased and unbiased random walks
+tags: Math
+categories: Math
 featured: false
 # pretty_table: true
 ---
@@ -17,6 +17,7 @@ Imagine a person standing on a number line at position zero. At each time step, 
 More formally, a random walk is a sequence of positions $$S_0$$, $$S_1$$, $$S_2$$, ... where:
 
 $$S_0 = 0$$ (starting position)
+
 $$S_n = S_0 + X_1 + X_2 + ... + X_n$$
 
 Here, each $$X_i$$ represents a random step, and the position at time n is simply the sum of all previous steps.
@@ -44,6 +45,7 @@ def simple_random_walk(n_steps=100, n_dims=2):
 An unbiased random walk (also called a symmetric random walk) is one where each step has equal probability in all possible directions. In the simplest one-dimensional case:
 
 $$P(step=+1)=1/2$$
+
 $$P(step=-1)=1/2$$
 
 The expected value of each step is zero: $$E[X_i]=(+1)\times (1/2) + (-1)\times (1/2)=0$$
@@ -66,6 +68,7 @@ The expected value of each step is zero: $$E[X_i]=(+1)\times (1/2) + (-1)\times 
 A biased random walk introduces a drift or tendency to move in a particular direction. Instead of equal probabilities, we might have:
 
 $$P(step=+1)=p$$
+
 $$P(step=-1)=q=1-p$$
 
 When $$p \neq 1/2$$, the walk becomes biasd. The expected value of each step is now $$E[X_i]=(+1)\times p + (-1)\times (1-p)=2p-1$$
