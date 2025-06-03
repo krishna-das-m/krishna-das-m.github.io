@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Random Walks- From Drunkard's Steps to Financial Markets
+title: Random Walks
 date: 2025-05-18 15:04:00
 description: Defining the network architecture and intializing the NN parameters
 tags: ML
@@ -17,7 +17,6 @@ Imagine a person standing on a number line at position zero. At each time step, 
 More formally, a random walk is a sequence of positions $$S_0$$, $$S_1$$, $$S_2$$, ... where:
 
 $$S_0 = 0$$ (starting position)
-
 $$S_n = S_0 + X_1 + X_2 + ... + X_n$$
 
 Here, each $$X_i$$ represents a random step, and the position at time n is simply the sum of all previous steps.
@@ -44,8 +43,8 @@ def simple_random_walk(n_steps=100, n_dims=2):
 
 An unbiased random walk (also called a symmetric random walk) is one where each step has equal probability in all possible directions. In the simplest one-dimensional case:
 
-- $$P(step=+1)=1/2$$
-- $$P(step=-1)=1/2$$
+$$P(step=+1)=1/2$$
+$$P(step=-1)=1/2$$
 
 The expected value of each step is zero: $$E[X_i]=(+1)\times (1/2) + (-1)\times (1/2)=0$$
 
@@ -55,11 +54,24 @@ The expected value of each step is zero: $$E[X_i]=(+1)\times (1/2) + (-1)\times 
     </div>
 </div>
 
+### Key properties of unbiased random walks
+
+- **Expected position:** The expected position at any time n is always zero. Even after thousands of steps, on average, the walker returns to where they started.
+- **Variance and standard deviation:** While the expected position is zero, the variance grows linearly with time. For a simple random walk, $$Var(S_n) = n$$, which means the standard deviation is $$\sqrt{n}$$.
+- **Recurrence:** In one and two dimensions, an unbiased random walk is recurrent - the walker will eventually return to their starting position with probability 1. However, in three or more dimensions, the walk becomes transient - there's a positive probability of never returning home.
+- **Central Limit Theorem:** As n becomes large, the position Sₙ approaches a normal distribution with mean 0 and variance $$n$$.
+
 ## Biased random walks
 
 A biased random walk introduces a drift or tendency to move in a particular direction. Instead of equal probabilities, we might have:
 
-- $$P(step=+1)=p$$
-- $$P(step=-1)=q=1-p$$
+$$P(step=+1)=p$$
+$$P(step=-1)=q=1-p$$
 
 When $$p \neq 1/2$$, the walk becomes biasd. The expected value of each step is now $$E[X_i]=(+1)\times p + (-1)\times (1-p)=2p-1$$
+
+### Key Properties of Biased Random Walks
+
+- **Drift:** The expected position after $$n$$ steps is $$n(2p - 1)$$. If $$p > 1/2$$, the walk drifts toward positive values; if $$p < 1/2$$, it drifts toward negative values.
+- **Recurrence vs. Transience:** Unlike unbiased walks, biased random walks in one dimension are transient - they don't necessarily return to their starting point. The stronger the bias, the less likely a return becomes.
+- **Long-term Behavior:** With positive bias $$(p > 1/2)$$, the position grows roughly linearly with time, eventually heading toward positive infinity.
