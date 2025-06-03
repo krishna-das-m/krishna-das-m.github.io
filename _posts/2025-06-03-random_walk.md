@@ -3,8 +3,8 @@ layout: post
 title: Random Walks
 date: 2025-05-18 15:04:00
 description: Implementing biased and unbiased random walks
-tags: Math
-categories: Math
+tags: math
+categories: math
 featured: false
 # pretty_table: true
 ---
