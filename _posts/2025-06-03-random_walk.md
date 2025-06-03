@@ -16,10 +16,10 @@ Imagine a person standing on a number line at position zero. At each time step, 
 
 More formally, a random walk is a sequence of positions $$S_0$$, $$S_1$$, $$S_2$$, ... where:
 
-$$
-S_0 = 0 (starting position)
-S_n = S_0 + X_1 + X_2 + ... + X_n
-$$
+$$S_0 = 0$$ (starting position)
+
+$$S_n = S_0 + X_1 + X_2 + ... + X_n$$
+
 Here, each $$X_i$$ represents a random step, and the position at time n is simply the sum of all previous steps.
 
 Let's implement a simple random walk in Python:
@@ -48,8 +48,15 @@ An unbiased random walk (also called a symmetric random walk) is one where each 
 The expected value of each step is zero: $$E[X_i]=(+1)\times (1/2) + (-1)\times (1/2)=0$$
 
 <div class="row justify-content-center">
-    <div class="col-sm-8 col-md-6 mt-4">
+    <div class="col-sm mt-3 mt-md-0">
         {% include figure.liquid loading="eager" path="assets/img/blog/2d_random_walks_animated.gif" class="img-fluid rounded z-depth-1" style="max-width: 300px; height: auto;" %}
     </div>
 </div>
 
+## Biased random walks
+
+A biased random walk introduces a drift or tendency to move in a particular direction. Instead of equal probabilities, we might have:
+- $$P(step=+1)=p$$
+- $$P(step=-1)=q=1-p$$
+
+When $$p \neq 1/2$$, the walk becomes biasd. The expected value of each step is now $$E[X_i]=(+1)\times p + (-1)\times (1-p)=2p-1$$
