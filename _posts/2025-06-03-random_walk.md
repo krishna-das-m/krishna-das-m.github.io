@@ -43,8 +43,10 @@ def simple_random_walk(n_steps=100, n_dims=2):
 ## Unbiased Random Walks
 
 An unbiased random walk (also called a symmetric random walk) is one where each step has equal probability in all possible directions. In the simplest one-dimensional case:
+
 - $$P(step=+1)=1/2$$
 - $$P(step=-1)=1/2$$
+
 The expected value of each step is zero: $$E[X_i]=(+1)\times (1/2) + (-1)\times (1/2)=0$$
 
 <div class="row justify-content-center">
@@ -56,6 +58,7 @@ The expected value of each step is zero: $$E[X_i]=(+1)\times (1/2) + (-1)\times 
 ## Biased random walks
 
 A biased random walk introduces a drift or tendency to move in a particular direction. Instead of equal probabilities, we might have:
+
 - $$P(step=+1)=p$$
 - $$P(step=-1)=q=1-p$$
 
