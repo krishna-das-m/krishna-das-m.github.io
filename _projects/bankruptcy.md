@@ -5,6 +5,7 @@ description: Predicting corporate bankruptcy using different ML models and compr
 img: assets/img/projects/bankruptcy_prediction.png
 importance: 2
 category: ML
+github: https://github.com/krishna-das-m/bankruptcy_prediction
 ---
 
-This page will be updated soon!
+
