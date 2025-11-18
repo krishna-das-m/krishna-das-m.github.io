@@ -32,6 +32,13 @@
                   </div>
                 </div>
               {% endif %}
+              {% if project.mlflow %}
+                <div class="mlflow-icon">
+                  <div class="icon" data-toggle="tooltip" title="Tracked with MLflow">
+                    <img src="{{ '/assets/img/icons/mlflow.svg' | relative_url }}" alt="MLflow" class="mlflow-svg-icon">
+                  </div>
+                </div>
+              {% endif %}
             </div>
           </div>
         </div>

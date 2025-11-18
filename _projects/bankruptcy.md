@@ -6,6 +6,7 @@ img: assets/img/projects/bankruptcy_prediction.png
 importance: 2
 category: ML
 github: https://github.com/krishna-das-m/bankruptcy_prediction
+mlflow: true
 ---
 
 Click on the github icon to know more about the project

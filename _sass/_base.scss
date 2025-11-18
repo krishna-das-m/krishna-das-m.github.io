@@ -1302,13 +1302,14 @@ ninja-keys::part(ninja-input-wrapper) {
   color: var(--global-text-color);
 }
 
-/* GitHub and PyTorch icon styling */
+/* GitHub, PyTorch, and MLflow icon styling */
 .gh-icon {
   font-size: 1.5em !important;
 }
 
 .github-icon,
-.pytorch-icon {
+.pytorch-icon,
+.mlflow-icon {
   margin-right: 1rem;
 }
 
@@ -1322,5 +1323,18 @@ ninja-keys::part(ninja-input-wrapper) {
 }
 
 .pytorch-svg-icon:hover {
+  transform: scale(1.1);
+}
+
+/* MLflow SVG icon styling */
+.mlflow-svg-icon {
+  width: 1em;
+  height: 1em;
+  vertical-align: middle;
+  display: inline-block;
+  transition: transform 0.2s ease;
+}
+
+.mlflow-svg-icon:hover {
   transform: scale(1.1);
 }
