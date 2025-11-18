@@ -1304,3 +1304,8 @@ ninja-keys::part(ninja-input-wrapper) {
   background-color: var(--global-theme-color);
   color: var(--global-text-color);
 }
+
+/* GitHub icon styling */
+.gh-icon {
+  font-size: 1.5em !important;
+}
