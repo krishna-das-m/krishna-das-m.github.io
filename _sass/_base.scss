@@ -1312,6 +1312,15 @@ ninja-keys::part(ninja-input-wrapper) {
   margin-right: 1rem;
 }
 
-.pytorch-icon .icon i {
-  color: #ee4c2c; /* PyTorch brand color */
+/* PyTorch SVG icon styling */
+.pytorch-svg-icon {
+  width: 1.5em;
+  height: 1.5em;
+  vertical-align: middle;
+  display: inline-block;
+  transition: transform 0.2s ease;
+}
+
+.pytorch-svg-icon:hover {
+  transform: scale(1.1);
 }
