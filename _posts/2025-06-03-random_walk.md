@@ -8,6 +8,7 @@ categories: math
 featured: false
 # pretty_table: true
 ---
+
 Random walks are among the most fundamental and elegant concepts in probability theory, with applications spanning from physics and biology to finance and computer science. At its core, a random walk describes a mathematical model where a particle or entity moves through space in a sequence of random steps.
 
 ## What is a Random Walk?
@@ -23,6 +24,7 @@ $$S_n = S_0 + X_1 + X_2 + ... + X_n$$
 Here, each $$X_i$$ represents a random step, and the position at time n is simply the sum of all previous steps.
 
 Let's implement a simple random walk in Python:
+
 ```python
 import numpy as np
 
@@ -34,6 +36,7 @@ def simple_random_walk(n_steps=100, n_dims=2):
     paths = np.concatenate((origins, paths), axis=0)
     return paths
 ```
+
 <div class="row justify-content-center">
     <div class="col-sm-8 col-md-6 mt-4">
         {% include figure.liquid loading="eager" path="assets/img/blog/random_walk_2d.gif" class="img-fluid rounded z-depth-1" style="max-width: 300px; height: auto;" %}

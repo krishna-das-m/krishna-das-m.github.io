@@ -8,5 +8,4 @@ category: ML
 github: https://github.com/krishna-das-m/bankruptcy_prediction
 ---
 
-
 Click on the github icon to know more about the project

@@ -12,7 +12,8 @@
   },
 
   // Optionally: run jekyll serve automatically on container entering using the Docker entrypoint
-  "postAttachCommand": "./bin/entry_point.sh",  "customizations": {
+  "postAttachCommand": "./bin/entry_point.sh",
+  "customizations": {
     "vscode": {
       "extensions": ["esbenp.prettier-vscode", "sissel.shopify-liquid", "yzhang.markdown-all-in-one"],
       "settings": {

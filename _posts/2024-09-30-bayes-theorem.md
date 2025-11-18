@@ -10,13 +10,16 @@ featured: true
 ---
 
 In this post, we’ll explore the relationship between **prior distribution**, **likelihood**, and **posterior distribution** using a practical example.
+
 #### Bayes' Theorem
+
 Bayes' Theorem helps us update our beliefs based on new evidence. Here's the formula:
 \begin{equation}
-\overbrace{P(hypothesis | evidence)}^{\text{posterior}} = \frac{\overbrace{P(evidence| hypothesis)}^{\text{likelihood}} \overbrace{P(hypothesis)}^{\text{prior}}}{\underbrace{P(evidence)}_{\text{marginal}}}
+\overbrace{P(hypothesis | evidence)}^{\text{posterior}} = \frac{\overbrace{P(evidence| hypothesis)}^{\text{likelihood}} \overbrace{P(hypothesis)}^{\text{prior}}}{\underbrace{P(evidence)}\_{\text{marginal}}}
 \end{equation}
 
 Where:
+
 - **Posterior**: How probable is our hypothesis given the observed evidence.
 - **Likelihood**: How probable is the evidence given that our hypothesis is true.
 - **Prior**: How probable was our hypothesis before observing the data.
@@ -61,33 +64,36 @@ In the context of our current scenario, when comparing it to the general form of
 
 ---
 
- Now where do the distribution plots of prior, likelihood and posterior come from?
- Before diving into how we obtain the distributions for the **prior**, **likelihood**, and **posterior**, let’s introduce a change of variable to make the equation more intuitive. We’ll substitute **Disease** with **$$\theta$$**, which represents the probability that a person from the population will test positive. This allows us to express **Bayes' Theorem** as:\
+Now where do the distribution plots of prior, likelihood and posterior come from?
+Before diving into how we obtain the distributions for the **prior**, **likelihood**, and **posterior**, let’s introduce a change of variable to make the equation more intuitive. We’ll substitute **Disease** with **$$\theta$$**, which represents the probability that a person from the population will test positive. This allows us to express **Bayes' Theorem** as:\
  \begin{equation}
- P(\theta|+)=\frac{P(+|\theta)P(\theta)}{P(+)}
- \end{equation}
- Our goal is to estimate the parameter **$$\theta$$**, which is the probability that a random individual will test positive for the disease. To make this concept more concrete, let's simulate a scenario where we conduct a total of 10 tests, out of which 2 people are positive (we’ll call this a **success**).
+P(\theta|+)=\frac{P(+|\theta)P(\theta)}{P(+)}
+\end{equation}
+Our goal is to estimate the parameter **$$\theta$$**, which is the probability that a random individual will test positive for the disease. To make this concept more concrete, let's simulate a scenario where we conduct a total of 10 tests, out of which 2 people are positive (we’ll call this a **success**).
 
- ```python
- # Create bernoulli trials
- N = 10 #total trials
- nDisease = 2 # success
+```python
+# Create bernoulli trials
+N = 10 #total trials
+nDisease = 2 # success
 
- # Create a list with Disease (D) and Healthy (H) results
- trials = ["D"] * nDisease + ["H"] * (N - nDisease)
+# Create a list with Disease (D) and Healthy (H) results
+trials = ["D"] * nDisease + ["H"] * (N - nDisease)
 
- # Shuffle the sequence to randomize the order of trials
- random.shuffle(trials)
+# Shuffle the sequence to randomize the order of trials
+random.shuffle(trials)
 
- print(trials)
- ['H', 'H', 'H', 'H', 'H', 'H', 'H', 'D', 'H', 'D']
- ```
+print(trials)
+['H', 'H', 'H', 'H', 'H', 'H', 'H', 'D', 'H', 'D']
+```
+
 ---
 
 #### **The Prior Distribution**
+
 Let’s assume we don’t have any specific information about the proportion of people who have the disease, so we don’t know the exact value of $$P(\theta)$$. Instead of assuming a single fixed value, we’ll consider a range of possible values for $$P(\theta)$$.\
 To account for this uncertainty, we’ll generate 10 random values between 0 and 1, which will represent potential probabilities for the prevalence of the disease in the population. This helps us explore various possible scenarios when estimating the likelihood of having the disease based on a positive test result.\
 Here’s how we generate these random values:
+
 ```python
 import numpy as np
 import matplotlib.pyplot as plt
@@ -104,6 +110,7 @@ At this stage, `theta` contains a set of values representing possible probabilit
 Next, we need to choose a distribution for the **prior**. A suitable choice is the **beta distribution**, which is defined over the interval $$[0, 1]$$, making it perfect for modeling probabilities like $$\theta$$.
 
 We can specify the prior distribution using the beta distribution:
+
 ```python
 # Define prior distribution
 a , b= 10, 10
@@ -117,46 +124,52 @@ Ptheta = Ptheta / sum(Ptheta)
 The array `Ptheta` gives us the prior probability distribution. This represents our **prior belief** about the possible values of $$P(\theta)$$ before observing any new data, such as the results of the test.
 
 #### **The Likelihood**
+
 **The likelihood function** is simply the joint probability of observing the data we have.
 For a set of test results, the likelihood function is expressed as:\
 $$P(+|\theta)=\prod_i^N P(+_i|\theta)$$
 This is the product of the probabilities of observing each positive test result for a given $$\theta$$. Specifically, the likelihood function for this binary event (positive or negative test result) can be written using the **binomial distribution**:
 
 $$P(+|\theta)=\binom{N}{k}\theta^k(1-\theta)^{N-k}$$
+
 ```python
 # Likelihood
 PPositiveGiventheta = comb(N, nDisease)*theta**nDisease * (1 - theta)**nHealthy
 ```
+
 #### **The Posterior Distribution**
+
 With both the **prior** and **likelihood** in hand, we can now calculate the **posterior distribution** using Bayes' Theorem. The only remaining part to compute is the denominator of Bayes' Theorem, which acts as a normalization factor, ensuring that the posterior probabilities sum to 1.
 
 Using the following Python code, we can calculate the **marginal probability** (the denominator) and the posterior:
+
 ```python
 # marginal probability
 PPositive = sum(PPositiveGiventheta * Ptheta)
 # posterior probability
 PthetaGivenPositive = PPositiveGiventheta*Ptheta / PPositive
 ```
+
 Now let’s take a look at what we’ve calculated for each value of $$\theta$$:
 
 | theta | prior  | likelihood | posterior |
-| ----  | -----  | ---------  | --------  |
-| 0.0   | 0.0000 |   0.0000   |  0.0000   |
-| 0.1   | 0.0545 |   0.1937   |  0.1106   |
-| 0.2   | 0.0970 |   0.3020   |  0.3065   |
-| 0.3   | 0.1273 |   0.2335   |  0.3110   |
-| 0.4   | 0.1455 |   0.1209   |  0.1841   |
-| 0.5   | 0.1515 |   0.0439   |  0.0697   |
-| 0.6   | 0.1455 |   0.0106   |  0.0162   |
-| 0.7   | 0.1273 |   0.0014   |  0.0019   |
-| 0.8   | 0.0970 |   0.0001   |  0.0001   |
-| 0.9   | 0.0545 |   0.0000   |  0.0000   |
-
+| ----- | ------ | ---------- | --------- |
+| 0.0   | 0.0000 | 0.0000     | 0.0000    |
+| 0.1   | 0.0545 | 0.1937     | 0.1106    |
+| 0.2   | 0.0970 | 0.3020     | 0.3065    |
+| 0.3   | 0.1273 | 0.2335     | 0.3110    |
+| 0.4   | 0.1455 | 0.1209     | 0.1841    |
+| 0.5   | 0.1515 | 0.0439     | 0.0697    |
+| 0.6   | 0.1455 | 0.0106     | 0.0162    |
+| 0.7   | 0.1273 | 0.0014     | 0.0019    |
+| 0.8   | 0.0970 | 0.0001     | 0.0001    |
+| 0.9   | 0.0545 | 0.0000     | 0.0000    |
 
 Starting with the **prior** column, we can see that, based on the beta distribution $$\beta(2,2)$$, most of the prior probability is centered around middle values of $$\theta$$. This reflects an initial belief that the probability of having the disease is likely to be between 0.4 and 0.6, while assigning smaller probabilities to extreme values close to 0 or 1.
 The **likelihood**, derived from the observed data, suggests that the most likely values for $$\theta$$ are between 0.2 and 0.3. Specifically, the maximum likelihood estimate for $$\theta$$ is 0.2, which corresponds to the proportion of positive test results observed in the sample.
 As a result, the **posterior distribution** represents an update to our prior belief based on the likelihood of the data. The posterior shifts the bulk of the probability away from the prior’s most likely values (around 0.4–0.6) and moves it toward the data-driven estimate of $$\theta$$ around 0.2.
 If we look at the mean of the posterior,
+
 ```python
 posteriorMean = sum(PDiseaseGivenPositive * theta)
 posteriorMean.round(4)

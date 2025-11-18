@@ -57,7 +57,6 @@ This observation gives us a hint: although the shapes are similar, the means are
     </div>
 </div>
 
-
 ## Framing the Hypothesis
 
 Now, in reality, we don’t know the **true population mean** (the actual average mass of _all_ protein bars in each country). So, we use the **sample means** as our best estimates.
@@ -68,7 +67,7 @@ We’ll test whether the average weight of protein bar in the India is different
 Assume we have two datasets: one for the India and one for the Poland.
 
 $$H_0:\mu_{ind}=\mu_{pln}$$  
-$$H_A:\mu_{ind}>\mu_{pln}$$  
+$$H_A:\mu_{ind}>\mu_{pln}$$
 
 An alternate way of writing the above equation is to compare the differences in population means to zero. Zero here corresponds to our hypothesized value for the differences in means.
 
@@ -108,8 +107,8 @@ $$H_0:\mu_{ind}-\mu_{pln}=0 \implies t=\frac{(\bar{x}_{ind}-\bar{x}_{pln})}{SE(\
 
 $$t=\frac{(\bar{x}_{ind}-\bar{x}_{pln})}{\sqrt{\frac{s^2_{ind}}{n_{ind}}+\frac{s^2_{pln}}{n_{pln}}}}$$
 
-
 First we'll calculate the test-statistic manually.
+
 ```python
 # calculate test statistic manually
 numerator = protein_ind.mean() - protein_pln.mean()   # numerator of the test statistic
@@ -119,6 +118,7 @@ denominator = np.sqrt(s_ind**2/n_ind + s_pln**2/n_pln)  # denominator of the te
 t_stat = numerator/denominator  # Calculate the test statistic
 print(t_stat)
 ```
+
 ```md
 output:
 7.280583232108425
@@ -130,12 +130,15 @@ dof = n_ind + n_pln -2 # degrees of freedom
 p_value = (t.sf(abs(t_stat), df=dof)) # p-value for right-tailed test
 print(p_value)
 ```
+
 ```md
 output:
 3.827486051688527e-12
 ```
+
 #### t-distribution
-The test statistic follows a t-distribution and has a parameter "degrees of freedom"(dof). *t-distribution for small degrees of freedom has a fatter tails than normal distribution.* As we increase the degrees of freedom, the t-distribution gets closer to the normal distribution. So a normal distribution is a t-distribution with infinite degrees if freedom.
+
+The test statistic follows a t-distribution and has a parameter "degrees of freedom"(dof). _t-distribution for small degrees of freedom has a fatter tails than normal distribution._ As we increase the degrees of freedom, the t-distribution gets closer to the normal distribution. So a normal distribution is a t-distribution with infinite degrees if freedom.
 Degrees of freedom is the maximum number of logically independent values in the data sample.
 In our two sample case, there are as many degrees of freedom as observations, minus two because we know two sample statistics, the mean of each group.
 
@@ -156,6 +159,7 @@ else:
     print("We fail to reject the null hypothesis. There is no significant difference in average weight.")
 print(f't-critical:{t_critical}')
 ```
+
 ```md
 output:
 t-statistic: 7.280583232108425
@@ -184,6 +188,7 @@ plt.title('t-distribution')
 plt.legend(loc='best')
 plt.text(2,0.13, r'p-value$=P(t>|t_0|)$')
 ```
+
 <div class="row justify-content-center">
     <div class="col-sm-8 col-md-6 mt-4">
         {% include figure.liquid loading="eager" path="assets/img/blog/t-distribution_ind_pln.png" class="img-fluid rounded z-depth-1" %}
@@ -195,4 +200,4 @@ The t-test produces two key outputs:
 
 - The **t-statistic** measures the size of the difference relative to the variation in the sample data.
 - The **p-value** indicates the probability of observing the data (or something more extreme) assuming the null hypothesis is true.
-Since the p-value is less than the significance level ($\alpha = 0.05$), we reject the null hypothesis.
+  Since the p-value is less than the significance level ($\alpha = 0.05$), we reject the null hypothesis.
