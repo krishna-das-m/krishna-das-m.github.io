@@ -691,9 +691,6 @@ footer.sticky-bottom {
     li {
       margin-bottom: 1rem;
 
-      .preview {
-      }
-
       .abbr {
         margin-bottom: 0.5rem;
 
@@ -1305,7 +1302,16 @@ ninja-keys::part(ninja-input-wrapper) {
   color: var(--global-text-color);
 }
 
-/* GitHub icon styling */
+/* GitHub and PyTorch icon styling */
 .gh-icon {
   font-size: 1.5em !important;
+}
+
+.github-icon,
+.pytorch-icon {
+  margin-right: 1rem;
+}
+
+.pytorch-icon .icon i {
+  color: #ee4c2c; /* PyTorch brand color */
 }
